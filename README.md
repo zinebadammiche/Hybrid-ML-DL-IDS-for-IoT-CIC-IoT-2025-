@@ -1,8 +1,10 @@
-# Real-Time IoT Intrusion Detection Using a Hybrid Machine and Deep Learning Framework  
+# Hybrid Machine and Deep Learning Framework for Real-Time IoT Intrusion Detection  
 ### Comprehensive Evaluation on CIC-IoT-2025
 
+---
+
 ## 📄 Associated Paper
-**Title:** Real-Time IoT Intrusion Detection Using a Hybrid Machine and Deep Learning Framework: Comprehensive Evaluation on CIC-IoT-2025  
+**Title:** *Real-Time IoT Intrusion Detection Using a Hybrid Machine and Deep Learning Framework: Comprehensive Evaluation on CIC-IoT-2025*
 
 **Authors:**  
 - **Zineb ADAMMICHE**, National Institute of Posts and Telecommunications (INPT), Rabat, Morocco  
@@ -13,98 +15,101 @@
 
 ---
 
-## 📌 Overview
-This repository provides the **implementation notebooks** accompanying the research paper *“Real-Time IoT Intrusion Detection Using a Hybrid Machine and Deep Learning Framework”*.  
+## 📌 Abstract / Overview
+This repository contains the **implementation notebooks** supporting the research paper on **real-time intrusion detection for IoT networks** using a **hybrid Machine Learning (ML) and Deep Learning (DL) framework**.
 
-The work presents a **rigorous, fair, and unified comparison** between:
-- **Classical Machine Learning (ML)** models  
-- **Advanced Deep Learning (DL)** architectures  
+The study provides a **fair, unified, and reproducible comparison** between:
+- Classical **Machine Learning models**
+- Advanced **Deep Learning architectures**
 
-for **intrusion detection in IoT networks**, using the **CIC-IoT-2025 dataset**.
-
-The study evaluates **binary (benign vs attack)** and **multiclass (8 attack types)** intrusion detection under **identical preprocessing, feature engineering, and evaluation protocols**.
+Experiments are conducted on the **CIC-IoT-2025 dataset** under **identical preprocessing, feature engineering, and evaluation protocols**, considering:
+- **Binary classification** (Benign vs. Attack)
+- **Multiclass classification** (8 attack categories)
 
 ---
 
 ## 🎯 Research Objectives
-- Perform a **head-to-head comparison** of ML and DL paradigms for IoT IDS
-- Analyze the **accuracy–efficiency trade-off** in resource-constrained IoT environments
-- Evaluate models under **binary and multiclass classification**
-- Investigate the impact of **feature engineering vs automatic feature learning**
-- Provide **practical deployment recommendations** for real-world IoT systems
+- Perform a **head-to-head comparison** of ML and DL approaches for IoT IDS  
+- Analyze the **accuracy–efficiency trade-off** in resource-constrained IoT environments  
+- Evaluate **binary and multiclass classification** scenarios  
+- Investigate **manual feature engineering vs. automatic feature learning**  
+- Provide **practical deployment guidelines** for real-world IoT systems  
 
 ---
 
 ## 🚀 Main Contributions
-- ✅ Unified experimental framework for ML and DL on CIC-IoT-2025  
-- ✅ Correlation-based feature selection (71 → 48 features)  
-- ✅ Evaluation of **6 ML configurations** and **4 DL architectures**  
-- ✅ Detailed per-class analysis across **8 attack categories**  
-- ✅ Computational efficiency benchmarking (training time, inference latency, memory)  
-- ✅ Actionable deployment guidance (edge, cloud, critical infrastructure)
+- Unified experimental pipeline for ML and DL models  
+- Correlation-based feature selection (**71 → 48 features**)  
+- Evaluation of **6 ML models** and **4 DL architectures**  
+- Detailed per-class analysis across **8 attack categories**  
+- Computational efficiency benchmarking (training time, inference latency, memory usage)  
+- Deployment-oriented recommendations (edge, cloud, critical infrastructure)  
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset Description
 - **Dataset:** CIC-IoT-2025  
-- **Source:** Canadian Institute for Cybersecurity (UNB)  
+- **Provider:** Canadian Institute for Cybersecurity (UNB)  
 - **Records:** 685,671 network flows  
 - **Features:** 71 numerical flow-based features  
-- **Classes:**  
-  - Binary: Benign / Attack  
-  - Multiclass (8): Benign, BruteForce, DDoS, DoS, Malware, MITM, Reconnaissance, Web  
 
-⚠️ **Dataset not included** due to size constraints.  
-📎 Download: CIC-IoT-2025 (official UNB website)
+**Classes:**
+- **Binary:** Benign / Attack  
+- **Multiclass (8):** Benign, BruteForce, DDoS, DoS, Malware, MITM, Reconnaissance, Web  
+
+⚠️ Dataset not included due to size constraints.  
+📎 Available via the official UNB website.
 
 ---
 
-## 🧠 Methodology Summary
-The framework adopts a **dual-track evaluation pipeline**:
+## 🧠 Methodology Overview
 
-### 1️⃣ Data Processing
-- Cleaning NaN and infinite values  
-- Standardization (StandardScaler)  
+### 1️⃣ Data Preprocessing
+- Removal of NaN and infinite values  
+- Feature standardization (StandardScaler)  
 - Class imbalance analysis  
 - Correlation-based feature selection  
-- Dimensionality reduction (PCA for ML)
+- PCA-based dimensionality reduction (ML track)  
 
 ### 2️⃣ Machine Learning Track
-Algorithms:
+**Algorithms:**
 - Random Forest  
 - XGBoost  
 - LightGBM  
-- Ensemble models (RF + XGB + LGB)
+- Ensemble models (RF + XGB + LGB)  
 
-Key strengths:
+**Advantages:**
 - High accuracy with low computational cost  
-- Strong performance on rare attack classes  
-- High interpretability
+- Strong detection of rare attack classes  
+- High interpretability  
 
 ### 3️⃣ Deep Learning Track
-Architectures:
+**Architectures:**
 - CNN  
 - CNN + BiLSTM  
 - Transformer  
 - Hybrid CNN + BiLSTM + Transformer  
 
-Key strengths:
+**Advantages:**
 - Automatic feature learning  
 - Temporal and sequential pattern modeling  
 
 ---
 
-## 🧪 Experimental Scenarios
-- **Binary Classification:** Benign vs Attack  
-- **Multiclass Classification:** 8 attack categories  
+## 🧪 Experimental Scenarios & Metrics
+**Scenarios:**
+- Binary classification  
+- Multiclass classification (8 classes)  
 
-Metrics:
+**Metrics:**
 - Accuracy  
 - Precision  
 - Recall  
 - F1-score  
 - ROC-AUC  
-- Training time, inference latency, memory usage  
+- Training time  
+- Inference latency  
+- Memory usage  
 
 ---
 
@@ -112,53 +117,35 @@ Metrics:
 
 ### 🔹 Best Machine Learning Models
 - **Binary:** XGBoost + LightGBM  
-  - Accuracy: **96%**
-  - ROC-AUC: **0.9844**
+  - Accuracy: **96%**  
+  - ROC-AUC: **0.9844**  
 - **Multiclass:** LightGBM  
-  - Accuracy: **96%**
-  - Strong performance on rare classes (Bruteforce, Recon)
+  - Accuracy: **96%**  
+  - Strong performance on rare attacks  
 
 ### 🔹 Best Deep Learning Models
 - **Binary:** Hybrid CNN + BiLSTM + Transformer  
-  - Accuracy: **96%**
+  - Accuracy: **96%**  
 - **Multiclass:** CNN + BiLSTM  
-  - Accuracy: **94.4%**
+  - Accuracy: **94.4%**  
 
-### 🔹 Efficiency Comparison
-| Approach | Training Time | Inference | Memory |
-|--------|---------------|-----------|--------|
-| ML     | 2–4 min       | 1.8–3.2 ms | 52–145 MB |
-| DL     | 9–19 min      | 8.5–15 ms  | 12–35 MB |
+### 🔹 Computational Efficiency
+| Approach | Training Time | Inference Latency | Memory Usage |
+|--------|---------------|------------------|--------------|
+| ML     | 2–4 min       | 1.8–3.2 ms       | 52–145 MB    |
+| DL     | 9–19 min      | 8.5–15 ms        | 12–35 MB     |
 
 ---
+
+## 📂 Repository Structure
+```text
 Hybrid-ML-DL-IDS-for-IoT-CIC-IoT-2025/
 │
-├── Notebook_Machine Learning Approach for IDS.ipynb
-│ └─ Classical ML models and ensemble evaluation
+├── Notebook_Machine_Learning_Approach_for_IDS.ipynb
+│   └─ Classical ML models and ensemble evaluation
 │
-├── Notebook_Deep Learning Approach for IDS.ipynb
-│ └─ CNN, BiLSTM, Transformer, Hybrid architectures
+├── Notebook_Deep_Learning_Approach_for_IDS.ipynb
+│   └─ CNN, BiLSTM, Transformer, hybrid architectures
 │
 └── README.md
 
----
-
-## ⚙️ Technologies
-- Python  
-- Jupyter Notebook  
-- Scikit-learn  
-- XGBoost  
-- LightGBM  
-- TensorFlow / Keras  
-- NumPy, Pandas, Matplotlib, Seaborn  
-
----
-
-## ▶️ How to Run
-```bash
-git clone https://github.com/zinebadammiche/Hybrid-ML-DL-IDS-for-IoT-CIC-IoT-2025-.git
-cd Hybrid-ML-DL-IDS-for-IoT-CIC-IoT-2025-
-jupyter notebook
-
-
-## 📂 Repository Structure
